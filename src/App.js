@@ -22,27 +22,30 @@ function App() {
 
   const onEnter=(keyval)=>{
     
-    if(currAttempt.letterPos>5)return
+    if(currAttempt.letterPos>6)return
     let currWord="";
     for(let i=0;i<5;i++){
       currWord+=board[currAttempt.attempt][i];
     }
     currWord+='\r';
-    // console.log(currWord.toLowerCase())
+    // console.log(currWord)
+    // console.log(correctWord)
     // console.log(wordSet)
     if(wordSet.has(currWord.toLowerCase())){
       setCurrAttempt({letterPos:0,attempt:currAttempt.attempt+1})
     }else{
       alert("Wrong word!!!");
+      // return;
     }
 
     currWord=currWord.substring(0,currWord.length-1);
-    console.log(currWord)
-    console.log(correctWord)
+    // console.log(currWord)
+    // console.log(correctWord)
+    // console.log(correctWord===currWord)
     if(currWord.toLowerCase()===correctWord.toLowerCase()){
       setGameOver({gmOver:true,guessed:true})
     }
-    console.log('hey')
+    // console.log('hey')
     if(currAttempt.attempt===5){
       setGameOver({gmOver:true,guessed:false})
     }
@@ -69,7 +72,7 @@ function App() {
   useEffect(()=>{
     generateWordSet().then((words)=>{
       setWordSet(words.wordSet)
-      console.log(words.wordSet)
+      // console.log(words.wordSet)
     })
   },[])
   return (
