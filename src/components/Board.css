@@ -1,0 +1,31 @@
+.row{
+    display: flex;
+    /* margin: 5px; */
+    /* border: 2px solid gold; */
+}
+.letter{
+    border: .2px solid rgb(59, 59, 59);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:4px 4px;
+}
+.board{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.gameover{
+    /* border: 2px solid red; */
+    text-align: center;
+    text-transform: capitalize;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}

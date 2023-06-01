@@ -1,0 +1,42 @@
+.key{
+    border: 2px solid rgb(81, 81, 81);
+    background-color: rgb(67, 68, 68);
+    display: inline-block;
+    height: 40px;
+    width: 30px;
+    margin: 2px;
+    position: relative;
+    text-align: center;
+}
+.mainKey{
+    /* border: 2px solid red; */
+    background-color: rgb(67, 68, 68);
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.flex{
+    /* border: 2px solid red; */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.big{
+    width: 70px;
+}
+.line1,.line2,.line3{
+    text-align: center;
+}
+
+#correct{
+    background-color: rgb(104, 220, 104);
+}
+#almost{
+    background-color: rgb(148, 177, 74);
+}
+#wrong{
+    background-color: rgb(46, 49, 46);
+}
